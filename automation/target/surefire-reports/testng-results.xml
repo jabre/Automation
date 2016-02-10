@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[INFO : testSignInFromLoginPage, browser = chrome, thread id = 1]]>
+    </line>
+    <line>
+      <![CDATA[INFO : Navigate to Login page.]]>
+    </line>
+    <line>
+      <![CDATA[INFO : Login page URL: https://www.hautelook.com/login]]>
+    </line>
+    <line>
+      <![CDATA[INFO : Sign in]]>
+    </line>
+    <line>
+      <![CDATA[INFO : Verify that the account link is displayed after login.]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+  </reporter-output>
+  <suite name="Smoke Test Suite" duration-ms="22220" started-at="2016-02-10T14:49:17Z" finished-at="2016-02-10T14:49:39Z">
+    <groups>
+    </groups>
+    <test name="Login Tests" duration-ms="22220" started-at="2016-02-10T14:49:17Z" finished-at="2016-02-10T14:49:39Z">
+      <class name="tests.LoginTests">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method, java.lang.String)[pri:0, instance:tests.LoginTests@4411d970]" name="setUp" is-config="true" duration-ms="14531" started-at="2016-02-10T15:49:17Z" finished-at="2016-02-10T15:49:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.LoginTests.testSignInFromLoginPage()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSignInFromLoginPage()[pri:0, instance:tests.LoginTests@4411d970]" name="testSignInFromLoginPage" duration-ms="6009" started-at="2016-02-10T15:49:32Z" finished-at="2016-02-10T15:49:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[INFO : testSignInFromLoginPage, browser = chrome, thread id = 1]]>
+            </line>
+            <line>
+              <![CDATA[INFO : Navigate to Login page.]]>
+            </line>
+            <line>
+              <![CDATA[INFO : Login page URL: https://www.hautelook.com/login]]>
+            </line>
+            <line>
+              <![CDATA[INFO : Sign in]]>
+            </line>
+            <line>
+              <![CDATA[INFO : Verify that the account link is displayed after login.]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSignInFromLoginPage -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@4411d970]" name="tearDown" is-config="true" duration-ms="1658" started-at="2016-02-10T15:49:38Z" finished-at="2016-02-10T15:49:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSignInFromLoginPage status=SUCCESS method=LoginTests.testSignInFromLoginPage()[pri:0, instance:tests.LoginTests@4411d970] output=INFO : testSignInFromLoginPage, browser = chrome, thread id = 1]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTests -->
+    </test> <!-- Login Tests -->
+  </suite> <!-- Smoke Test Suite -->
+</testng-results>
