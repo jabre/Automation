@@ -7,7 +7,7 @@ public class Configuration {
 	 * @return URL as a string.
 	 */
 	public static String getBaseUrl() {
-		String baseUrl = "https://www.hautelook.com";
+		String baseUrl = "http://google.com";
 		if (System.getProperty("baseurl") != null)
 			baseUrl = System.getProperty("baseurl");
 

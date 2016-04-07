@@ -4,10 +4,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.Proxy;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -27,6 +27,7 @@ public class WebDriverFactory {
             break;
         case "chrome":
         	desiredCapabilities = DesiredCapabilities.chrome();
+        	desiredCapabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
         	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\chromedriver.exe");
         	break;
         case "safari":
@@ -38,6 +39,8 @@ public class WebDriverFactory {
         case "internet explorer":
         	desiredCapabilities = DesiredCapabilities.internetExplorer();
         	desiredCapabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+        	desiredCapabilities.setCapability("requireWindowFocus", true);
+        	System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\IEDriverServer.exe");
         	break;
         default:
             desiredCapabilities = new DesiredCapabilities();
@@ -66,7 +69,7 @@ public class WebDriverFactory {
         case "internet explorer":        	
             return new InternetExplorerDriver(desiredCapabilities);
         default:
-            return new HtmlUnitDriver();
+            return new ChromeDriver(desiredCapabilities);
         }
     }
     

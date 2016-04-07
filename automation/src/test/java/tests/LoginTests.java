@@ -16,17 +16,6 @@ public class LoginTests extends BaseSeleniumTestCase {
 
 		log.info("Sign in");
 	    loginPage.login("qaautomation@test.com", "7D*3gK!i");
-	    File imageFile = new File("C:\\Users\\mradivojevic\\Documents\\test.png");
-	    Tesseract instance = Tesseract.getInstance(); //
-
-	    try {
-
-	    String result = instance.doOCR(imageFile);
-	    System.out.println(result);
-
-	    } catch (TesseractException e) {
-	    System.err.println(e.getMessage());
-	    }
 	}
 }
 
